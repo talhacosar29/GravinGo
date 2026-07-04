@@ -1,0 +1,141 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "features": "Özellikler",
+    "gallery": "Galeri",
+    "download": "İndir",
+    "faq": "SSS",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "badge": "Şimdi Mevcut",
+    "title": "GravinGo",
+    "subtitle": "Yerçekimine Hükmet. İmkansızı Yen.",
+    "description": "Fütüristik bir sonsuz koşu oyununda yerçekimine meydan oku. Üç kontrol modu, hiç durmayan dinamik zorluk ve küresel liderlik tabloları — hepsi kusursuz bir mobil deneyimde.",
+    "cta_appstore": "App Store'dan İndir",
+    "cta_google": "Google Play'den İndir",
+    "phone_left_label": "Oynanış",
+    "phone_right_label": "Kozmetikler"
+  },
+  "features": {
+    "section_title": "Özellikler",
+    "section_subtitle": "Yerçekimine meydan okuyan deneyim için ihtiyacın olan her şey.",
+    "items": [
+      {
+        "icon": "⚡",
+        "title": "Dinamik Zorluk",
+        "desc": "Asla tavana ulaşmayan Tehlike Ölçer. Ne kadar hayatta kalırsan, o kadar zorlaşır."
+      },
+      {
+        "icon": "🎮",
+        "title": "Üç Kontrol Modu",
+        "desc": "Çevirme, Işınlanma veya Sürükleme — her mod tamamen farklı bir meydan okuma sunar."
+      },
+      {
+        "icon": "🌍",
+        "title": "Küresel Sıralama",
+        "desc": "Dünya genelindeki oyunculara karşı yarış. Sıralamalarda yüksel, yeteneklerini kanıtla."
+      },
+      {
+        "icon": "📅",
+        "title": "Günlük Görevler",
+        "desc": "Her gün yeni görevler. Tamamla, özel ödüller kazan."
+      },
+      {
+        "icon": "🎨",
+        "title": "Kostümleri Aç",
+        "desc": "Orbunu muhteşem kostümler, izler ve arka plan efektleriyle özelleştir."
+      },
+      {
+        "icon": "✨",
+        "title": "Premium Efektler",
+        "desc": "Efsanevi ve Mitik nadirlik seviyesinde, nefes kesici görsel efektlere sahip eşyalar."
+      },
+      {
+        "icon": "🔑",
+        "title": "Anahtar Devam Sistemi",
+        "desc": "Koşuna devam etmek için anahtarları kullan. Stratejik maliyet artışı her kararı anlamlı kılar."
+      },
+      {
+        "icon": "🏆",
+        "title": "Başarımlar",
+        "desc": "Oyunda ustalaştıkça başarımları aç. İlerleme ve kilometre taşlarını takip et."
+      }
+    ]
+  },
+  "modes": {
+    "section_title": "Oyun Modları",
+    "section_subtitle": "Üç farklı oynayış. Tek hedef: hayatta kal.",
+    "items": [
+      {
+        "icon": "🔄",
+        "title": "Çevirme",
+        "desc": "Yerçekimini tersine çevirmek için dokun. Öğrenmesi kolay, ustalaşması imkansız.",
+        "tag": "Klasik"
+      },
+      {
+        "icon": "⚡",
+        "title": "Işınlanma",
+        "desc": "Anlık pozisyon değişimi. Milisaniye seviyesinde refleksler gerektirir.",
+        "tag": "İleri"
+      },
+      {
+        "icon": "👆",
+        "title": "Sürükleme",
+        "desc": "Parmağınla tam kontrol. Maksimum özgürlük, maksimum tehlike.",
+        "tag": "Uzman"
+      }
+    ]
+  },
+  "gallery": {
+    "section_title": "Galeri",
+    "section_subtitle": "GravinGo'yu iş başında gör."
+  },
+  "download": {
+    "section_title": "Şimdi İndir",
+    "section_subtitle": "iOS ve Android'de mevcut. Oynaması ücretsiz.",
+    "cta_appstore": "App Store",
+    "cta_google": "Google Play",
+    "note": "Ücretsiz · Oyun içinde reklam yok · Premium kozmetikler mevcut"
+  },
+  "faq": {
+    "section_title": "SSS",
+    "section_subtitle": "Soruların mı var? Cevaplarımız hazır.",
+    "items": [
+      {
+        "q": "GravinGo ücretsiz mi?",
+        "a": "Evet! GravinGo tamamen ücretsiz indirilebilir ve oynanabilir. İsteğe bağlı olarak kozmetik eşyalar ve anahtar paketleri satın alabilirsiniz."
+      },
+      {
+        "q": "Çevrimdışı oynayabilir miyim?",
+        "a": "Evet, temel oynanış çevrimdışı çalışır. Liderlik tabloları ve günlük görevler internet bağlantısı gerektirir."
+      },
+      {
+        "q": "Anahtarlar nasıl çalışır?",
+        "a": "Anahtarlar, çarpışma sonrası koşunuza devam etmenizi sağlar. Her devam ettiğinizde maliyet iki katına çıkar, bu da stratejik kullanımı önemli kılar."
+      },
+      {
+        "q": "Günlük Görevler nasıl çalışır?",
+        "a": "Her gün benzersiz hedeflerle yeni görevler oluşturulur. Tamamlayarak coin, anahtar ve özel ödüller kazanın."
+      },
+      {
+        "q": "Hangi platformlar destekleniyor?",
+        "a": "GravinGo hem iOS hem de Android cihazlarda kullanılabilir."
+      }
+    ]
+  },
+  "contact": {
+    "section_title": "İletişim",
+    "section_subtitle": "Sizden haber almak isteriz.",
+    "email_label": "E-posta",
+    "email": "dev.talhacosar@gmail.com",
+    "follow_label": "Bizi Takip Edin"
+  },
+  "footer": {
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları",
+    "support": "Destek",
+    "contact": "İletişim",
+    "copyright": "© 2026 GravinGo. Tüm hakları saklıdır."
+  }
+}

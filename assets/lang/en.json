@@ -1,0 +1,141 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "gallery": "Gallery",
+    "download": "Download",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Available Now",
+    "title": "GravinGo",
+    "subtitle": "Master Gravity. Beat the Impossible.",
+    "description": "Defy gravity in a futuristic endless runner. Three control modes, dynamic difficulty that never stops scaling, and global leaderboards — all in one beautifully crafted mobile experience.",
+    "cta_appstore": "Download on App Store",
+    "cta_google": "Get it on Google Play",
+    "phone_left_label": "Gameplay",
+    "phone_right_label": "Cosmetics"
+  },
+  "features": {
+    "section_title": "Features",
+    "section_subtitle": "Everything you need for the ultimate gravity-defying experience.",
+    "items": [
+      {
+        "icon": "⚡",
+        "title": "Dynamic Difficulty",
+        "desc": "A Danger Meter that never caps. The longer you survive, the more intense it gets."
+      },
+      {
+        "icon": "🎮",
+        "title": "Three Control Modes",
+        "desc": "Flip, Teleport, or Drag — each mode offers a completely different challenge."
+      },
+      {
+        "icon": "🌍",
+        "title": "Global Leaderboard",
+        "desc": "Compete against players worldwide. Climb the ranks and prove your skills."
+      },
+      {
+        "icon": "📅",
+        "title": "Daily Challenges",
+        "desc": "New challenges every day. Complete them to earn exclusive rewards."
+      },
+      {
+        "icon": "🎨",
+        "title": "Unlock Skins",
+        "desc": "Customize your orb with stunning skins, trails, and background effects."
+      },
+      {
+        "icon": "✨",
+        "title": "Premium Effects",
+        "desc": "Legendary and Mythic rarity items with jaw-dropping visual effects."
+      },
+      {
+        "icon": "🔑",
+        "title": "Key Continue System",
+        "desc": "Use keys to continue your run. Strategic cost scaling keeps every decision meaningful."
+      },
+      {
+        "icon": "🏆",
+        "title": "Achievements",
+        "desc": "Unlock achievements as you master the game. Track your progress and milestones."
+      }
+    ]
+  },
+  "modes": {
+    "section_title": "Game Modes",
+    "section_subtitle": "Three ways to play. One goal: survive.",
+    "items": [
+      {
+        "icon": "🔄",
+        "title": "Flip",
+        "desc": "Tap to reverse gravity. Simple to learn, impossible to master.",
+        "tag": "Classic"
+      },
+      {
+        "icon": "⚡",
+        "title": "Teleport",
+        "desc": "Instant position switch. Millisecond reactions required.",
+        "tag": "Advanced"
+      },
+      {
+        "icon": "👆",
+        "title": "Drag",
+        "desc": "Full control with your finger. Maximum freedom, maximum danger.",
+        "tag": "Expert"
+      }
+    ]
+  },
+  "gallery": {
+    "section_title": "Gallery",
+    "section_subtitle": "See GravinGo in action."
+  },
+  "download": {
+    "section_title": "Download Now",
+    "section_subtitle": "Available on iOS and Android. Free to play.",
+    "cta_appstore": "App Store",
+    "cta_google": "Google Play",
+    "note": "Free to play · No ads in gameplay · Premium cosmetics available"
+  },
+  "faq": {
+    "section_title": "FAQ",
+    "section_subtitle": "Got questions? We've got answers.",
+    "items": [
+      {
+        "q": "Is GravinGo free?",
+        "a": "Yes! GravinGo is completely free to download and play. You can purchase cosmetic items and key packs optionally."
+      },
+      {
+        "q": "Can I play offline?",
+        "a": "Yes, the core gameplay works offline. Leaderboards and daily challenges require an internet connection."
+      },
+      {
+        "q": "How do Keys work?",
+        "a": "Keys let you continue your run after a crash. The cost doubles each time you continue in a single run, making strategic use essential."
+      },
+      {
+        "q": "How do Daily Challenges work?",
+        "a": "Every day, new challenges are generated with unique objectives. Complete them to earn coins, keys, and exclusive rewards."
+      },
+      {
+        "q": "What platforms are supported?",
+        "a": "GravinGo is available on both iOS and Android devices."
+      }
+    ]
+  },
+  "contact": {
+    "section_title": "Contact",
+    "section_subtitle": "We'd love to hear from you.",
+    "email_label": "Email",
+    "email": "dev.talhacosar@gmail.com",
+    "follow_label": "Follow Us"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "support": "Support",
+    "contact": "Contact",
+    "copyright": "© 2026 GravinGo. All rights reserved."
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — GravinGo</title>
+  <meta name="description" content="Contact the GravinGo team for support, feedback, or business inquiries.">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <style>
+    .legal-page { padding: 140px 0 80px; position: relative; z-index: 1; }
+    .legal-page h1 { margin-bottom: 2rem; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .contact-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; transition: all var(--transition); }
+    .contact-item:hover { border-color: rgba(0, 217, 255, 0.15); transform: translateY(-4px); box-shadow: var(--glow-accent); }
+    .contact-item h3 { font-size: 0.85rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem; font-family: 'Orbitron', sans-serif; }
+    .contact-item p { color: var(--white); font-size: 1.05rem; }
+    .contact-item a { color: var(--accent); text-decoration: none; font-size: 1.05rem; }
+    .contact-item a:hover { text-decoration: underline; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--gray); text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem; transition: color var(--transition); }
+    .back-link:hover { color: var(--white); }
+  </style>
+</head>
+<body>
+  <canvas id="stars-canvas"></canvas>
+
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/gravingo_logo.png" alt="GravinGo" class="nav-logo-img">
+        <span><span class="text-gradient">Gravin</span>Go</span>
+      </a>
+      <div class="nav-right">
+        <a href="index.html" class="nav-cta ripple">← Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="legal-page">
+    <div class="container" style="max-width: 800px;">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <h1 class="section-title">Contact Us</h1>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <h3>General Support</h3>
+          <a href="mailto:dev.talhacosar@gmail.com">dev.talhacosar@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <h3>Social Media</h3>
+          <p>
+            <a href="https://instagram.com/tycosoftware" target="_blank" rel="noopener">@tycosoftware</a>
+          </p>
+        </div>
+        <div class="contact-item">
+          <h3>Website</h3>
+          <a href="https://talhacosar29.github.io/tyco_portfolyo/" target="_blank" rel="noopener">tyco portfolyo</a>
+        </div>
+        <div class="contact-item">
+          <h3>Location</h3>
+          <p style="color: var(--gray-light);">Istanbul, Turkey</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 GravinGo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/animations.js"></script>
+  <script>Animations.init();</script>
+</body>
+</html>
