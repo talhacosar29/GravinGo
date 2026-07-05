@@ -21,10 +21,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 /* ── Build dynamic sections from translation data ─── */
 function buildDynamicContent(data) {
+  buildHeroPhones(data);
   buildFeatures(data);
   buildModes(data);
   buildGallery(data);
   buildFAQ(data);
+}
+
+/* ── Hero screenshots ─────────────────────────────── */
+function buildHeroPhones(data) {
+  const left = document.getElementById('hero-phone-left');
+  const right = document.getElementById('hero-phone-right');
+  if (!left || !right || !data.hero) return;
+
+  const { phone_left: phoneLeft, phone_right: phoneRight } = data.hero;
+  if (phoneLeft?.src) {
+    left.innerHTML = `<img src="${phoneLeft.src}" alt="${phoneLeft.alt}" width="540" height="1170" loading="eager">`;
+  }
+  if (phoneRight?.src) {
+    right.innerHTML = `<img src="${phoneRight.src}" alt="${phoneRight.alt}" width="540" height="1170" loading="eager">`;
+  }
 }
 
 /* ── Features ─────────────────────────────────────── */
@@ -65,24 +81,19 @@ function buildGallery(data) {
   const slider = document.getElementById('gallery-slider');
   if (!slider) return;
 
-  const screenshots = [
-    { placeholder: '🎮', label: 'Screenshot 1' },
-    { placeholder: '🏆', label: 'Screenshot 2' },
-    { placeholder: '🎨', label: 'Screenshot 3' },
-    { placeholder: '⚡', label: 'Screenshot 4' },
-    { placeholder: '🌍', label: 'Screenshot 5' },
-  ];
+  const screenshots = data.gallery?.screenshots ?? [];
+  if (screenshots.length === 0) return;
 
-  slider.innerHTML = screenshots.map(s => `
-    <div class="gallery-item">
-      <div class="gallery-phone">
-        <div class="gallery-screen">
-          <div class="gallery-placeholder">
-            <span>${s.placeholder}</span>
-            <span>${s.label}</span>
-          </div>
-        </div>
-      </div>
+  slider.innerHTML = screenshots.map((shot, index) => `
+    <div class="gallery-item gallery-item--screenshot">
+      <img
+        src="${shot.src}"
+        alt="${shot.alt}"
+        width="540"
+        height="1170"
+        loading="${index < 2 ? 'eager' : 'lazy'}"
+        decoding="async"
+      >
     </div>
   `).join('');
 }

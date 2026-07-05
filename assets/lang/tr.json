@@ -14,8 +14,14 @@
     "description": "Fütüristik bir sonsuz koşu oyununda yerçekimine meydan oku. Üç kontrol modu, hiç durmayan dinamik zorluk ve küresel liderlik tabloları — hepsi kusursuz bir mobil deneyimde.",
     "cta_appstore": "App Store'dan İndir",
     "cta_google": "Google Play'den İndir",
-    "phone_left_label": "Oynanış",
-    "phone_right_label": "Kozmetikler"
+    "phone_left": {
+      "src": "assets/images/GravinGo_Android_ScreenShots/2.png",
+      "alt": "GravinGo oynanış — yerçekimi çevirme mekaniği"
+    },
+    "phone_right": {
+      "src": "assets/images/GravinGo_Android_ScreenShots/5.png",
+      "alt": "GravinGo mağaza ve premium kozmetikler"
+    }
   },
   "features": {
     "section_title": "Özellikler",
@@ -89,7 +95,17 @@
   },
   "gallery": {
     "section_title": "Galeri",
-    "section_subtitle": "GravinGo'yu iş başında gör."
+    "section_subtitle": "GravinGo'yu iş başında gör.",
+    "screenshots": [
+      { "src": "assets/images/GravinGo_Android_ScreenShots/1.png", "alt": "Ana menü, günlük ödüller ve oyna butonu" },
+      { "src": "assets/images/GravinGo_Android_ScreenShots/2.png", "alt": "Oynanış — yerçekimi çevirme ve görev bildirimi" },
+      { "src": "assets/images/GravinGo_Android_ScreenShots/3.png", "alt": "Oyun bitti ekranı, skor ve devam seçenekleri" },
+      { "src": "assets/images/GravinGo_Android_ScreenShots/4.png", "alt": "Başarım açıldı kutlama ekranı" },
+      { "src": "assets/images/GravinGo_Android_ScreenShots/5.png", "alt": "Mağaza, premium paket ve skinler" },
+      { "src": "assets/images/GravinGo_Android_ScreenShots/6.png", "alt": "Günlük görevler, XP ve coin ödülleri" },
+      { "src": "assets/images/GravinGo_Android_ScreenShots/7.png", "alt": "Profil, istatistikler ve lig ilerlemesi" },
+      { "src": "assets/images/GravinGo_Android_ScreenShots/8.png", "alt": "Ayarlar, kontrol modları ve oyun hissi" }
+    ]
   },
   "download": {
     "section_title": "Şimdi İndir",

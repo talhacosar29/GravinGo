@@ -114,8 +114,13 @@
   }
 
   /* Gallery mobile */
-  .gallery-item {
+  .gallery-item,
+  .gallery-item--screenshot {
     flex: 0 0 220px;
+  }
+
+  .hero-screenshot {
+    width: min(200px, 44vw);
   }
 
   /* Download mobile */
