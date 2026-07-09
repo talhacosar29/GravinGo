@@ -36,10 +36,10 @@ function buildHeroPhones(data) {
 
   const { phone_left: phoneLeft, phone_right: phoneRight } = data.hero;
   if (phoneLeft?.src) {
-    left.innerHTML = `<img src="${phoneLeft.src}" alt="${phoneLeft.alt}" width="540" height="1170" loading="eager">`;
+    left.innerHTML = `<img src="${phoneLeft.src}" alt="${phoneLeft.alt}" width="1242" height="2688" loading="eager">`;
   }
   if (phoneRight?.src) {
-    right.innerHTML = `<img src="${phoneRight.src}" alt="${phoneRight.alt}" width="540" height="1170" loading="eager">`;
+    right.innerHTML = `<img src="${phoneRight.src}" alt="${phoneRight.alt}" width="1242" height="2688" loading="eager">`;
   }
 }
 
@@ -89,8 +89,8 @@ function buildGallery(data) {
       <img
         src="${shot.src}"
         alt="${shot.alt}"
-        width="540"
-        height="1170"
+        width="1242"
+        height="2688"
         loading="${index < 2 ? 'eager' : 'lazy'}"
         decoding="async"
       >

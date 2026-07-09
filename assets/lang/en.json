@@ -15,11 +15,11 @@
     "cta_appstore": "Download on App Store",
     "cta_google": "Get it on Google Play",
     "phone_left": {
-      "src": "assets/images/GravinGo_Android_ScreenShots/2.png",
+      "src": "assets/images/GravinGo_IOS_ScreenShots_Phone/2.png",
       "alt": "GravinGo gameplay with gravity flip mechanics"
     },
     "phone_right": {
-      "src": "assets/images/GravinGo_Android_ScreenShots/5.png",
+      "src": "assets/images/GravinGo_IOS_ScreenShots_Phone/5.png",
       "alt": "GravinGo in-game store and premium cosmetics"
     }
   },
@@ -97,14 +97,14 @@
     "section_title": "Gallery",
     "section_subtitle": "See GravinGo in action.",
     "screenshots": [
-      { "src": "assets/images/GravinGo_Android_ScreenShots/1.png", "alt": "Main menu with daily rewards and play button" },
-      { "src": "assets/images/GravinGo_Android_ScreenShots/2.png", "alt": "Core gameplay with gravity flip and mission toast" },
-      { "src": "assets/images/GravinGo_Android_ScreenShots/3.png", "alt": "Game over screen with score and continue options" },
-      { "src": "assets/images/GravinGo_Android_ScreenShots/4.png", "alt": "Achievement unlocked celebration dialog" },
-      { "src": "assets/images/GravinGo_Android_ScreenShots/5.png", "alt": "In-game store with premium bundle and skins" },
-      { "src": "assets/images/GravinGo_Android_ScreenShots/6.png", "alt": "Daily missions with XP and coin rewards" },
-      { "src": "assets/images/GravinGo_Android_ScreenShots/7.png", "alt": "Player profile with stats and league progress" },
-      { "src": "assets/images/GravinGo_Android_ScreenShots/8.png", "alt": "Settings with control modes and game feel tuning" }
+      { "src": "assets/images/GravinGo_IOS_ScreenShots_Phone/1.png", "alt": "Main menu with daily rewards and play button" },
+      { "src": "assets/images/GravinGo_IOS_ScreenShots_Phone/2.png", "alt": "Core gameplay with gravity flip and mission toast" },
+      { "src": "assets/images/GravinGo_IOS_ScreenShots_Phone/3.png", "alt": "Game over screen with score and continue options" },
+      { "src": "assets/images/GravinGo_IOS_ScreenShots_Phone/4.png", "alt": "Achievement unlocked celebration dialog" },
+      { "src": "assets/images/GravinGo_IOS_ScreenShots_Phone/5.png", "alt": "In-game store with premium bundle and skins" },
+      { "src": "assets/images/GravinGo_IOS_ScreenShots_Phone/6.png", "alt": "Daily missions with XP and coin rewards" },
+      { "src": "assets/images/GravinGo_IOS_ScreenShots_Phone/7.png", "alt": "Player profile with stats and league progress" },
+      { "src": "assets/images/GravinGo_IOS_ScreenShots_Phone/8.png", "alt": "Settings with control modes and game feel tuning" }
     ]
   },
   "download": {
