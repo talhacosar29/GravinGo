@@ -146,35 +146,45 @@ const Animations = (() => {
     }
   }
 
-  /* ── FAQ Accordion ──────────────────────────────── */
-  function initFAQ() {
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-
-        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
-      });
-    });
-  }
-
   /* ── Mobile Nav Toggle ──────────────────────────── */
   function initMobileNav() {
     const hamburger = document.querySelector('.nav-hamburger');
     const links = document.querySelector('.nav-links');
     if (!hamburger || !links) return;
 
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      links.classList.toggle('open');
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      links.classList.remove('open');
+      document.body.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      hamburger.classList.add('active');
+      links.classList.add('open');
+      document.body.classList.add('nav-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+    }
+
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (links.classList.contains('open')) closeMenu();
+      else openMenu();
     });
 
     links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        links.classList.remove('open');
-      });
+      a.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!links.classList.contains('open')) return;
+      if (!links.contains(e.target) && !hamburger.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 992) closeMenu();
     });
   }
 
@@ -201,7 +211,6 @@ const Animations = (() => {
     initScrollReveal();
     initRipple();
     initGallerySlider();
-    initFAQ();
     initMobileNav();
     initSmoothScroll();
   }

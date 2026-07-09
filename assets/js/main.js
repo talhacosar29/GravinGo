@@ -5,11 +5,20 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
   await Language.init();
+  initFAQ();
   buildDynamicContent(Language.getData());
   Animations.init();
+  STORE.applyLinks();
+
+  if (document.body.classList.contains('download-page')) {
+    initDownloadPage();
+  }
 
   Language.onLangChange((data) => {
     buildDynamicContent(data);
+    if (document.body.classList.contains('download-page')) {
+      updateRedirectBanner(data);
+    }
   });
 
   document.querySelectorAll('.lang-switch button').forEach(btn => {
@@ -18,6 +27,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   });
 });
+
+/* ── Download page auto-redirect ──────────────────── */
+function initDownloadPage() {
+  const platform = STORE.detectPlatform();
+  if (platform === 'other') return;
+
+  updateRedirectBanner(Language.getData());
+  const banner = document.getElementById('redirect-banner');
+  if (banner) banner.hidden = false;
+
+  STORE.redirectIfMobile(1200);
+}
+
+function updateRedirectBanner(data) {
+  const banner = document.getElementById('redirect-banner');
+  if (!banner) return;
+
+  const platform = STORE.detectPlatform();
+  if (platform === 'ios') {
+    banner.textContent = data.download_page?.redirecting_ios || 'Redirecting to App Store...';
+  } else if (platform === 'android') {
+    banner.textContent = data.download_page?.redirecting_android || 'Redirecting to Google Play...';
+  }
+}
 
 /* ── Build dynamic sections from translation data ─── */
 function buildDynamicContent(data) {
@@ -98,14 +131,32 @@ function buildGallery(data) {
   `).join('');
 }
 
-/* ── FAQ ──────────────────────────────────────────── */
+/* ── FAQ (event delegation — single binding) ──────── */
+let faqInitialized = false;
+
+function initFAQ() {
+  const list = document.getElementById('faq-list');
+  if (!list || faqInitialized) return;
+  faqInitialized = true;
+
+  list.addEventListener('click', (e) => {
+    const btn = e.target.closest('.faq-question');
+    if (!btn) return;
+
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+}
+
 function buildFAQ(data) {
   const list = document.getElementById('faq-list');
   if (!list || !data.faq) return;
 
   list.innerHTML = data.faq.items.map(item => `
     <div class="faq-item">
-      <button class="faq-question">
+      <button class="faq-question" type="button">
         <span>${item.q}</span>
         <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="6 9 12 15 18 9"></polyline>
@@ -116,15 +167,6 @@ function buildFAQ(data) {
       </div>
     </div>
   `).join('');
-
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
-    });
-  });
 }
 
 /* ── Re-observe stagger children after rebuild ────── */

@@ -114,6 +114,10 @@
     "cta_google": "Google Play",
     "note": "Ücretsiz · Oyun içinde reklam yok · Premium kozmetikler mevcut"
   },
+  "download_page": {
+    "redirecting_ios": "App Store'a yönlendiriliyorsunuz...",
+    "redirecting_android": "Google Play'e yönlendiriliyorsunuz..."
+  },
   "faq": {
     "section_title": "SSS",
     "section_subtitle": "Soruların mı var? Cevaplarımız hazır.",

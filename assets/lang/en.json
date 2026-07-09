@@ -114,6 +114,10 @@
     "cta_google": "Google Play",
     "note": "Free to play · No ads in gameplay · Premium cosmetics available"
   },
+  "download_page": {
+    "redirecting_ios": "Redirecting to App Store...",
+    "redirecting_android": "Redirecting to Google Play..."
+  },
   "faq": {
     "section_title": "FAQ",
     "section_subtitle": "Got questions? We've got answers.",
