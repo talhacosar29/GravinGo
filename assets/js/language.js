@@ -60,7 +60,15 @@ const Language = (() => {
     const saved = localStorage.getItem('gravingo-lang');
     const browserLang = navigator.language.slice(0, 2);
     const lang = saved || (['tr', 'en'].includes(browserLang) ? browserLang : 'en');
-    await setLang(lang);
+    // Prefetch the other language in idle time for snappier switch
+    const other = lang === 'tr' ? 'en' : 'tr';
+    const initPromise = setLang(lang);
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => { load(other).catch(() => {}); });
+    } else {
+      setTimeout(() => { load(other).catch(() => {}); }, 1500);
+    }
+    await initPromise;
   }
 
   return { init, setLang, onLangChange, getLang, getData };

@@ -3,21 +3,15 @@
    Orchestrates language system, dynamic content, animations
    ═══════════════════════════════════════════════════════ */
 
-document.addEventListener('DOMContentLoaded', async () => {
-  await Language.init();
+document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
-  buildDynamicContent(Language.getData());
   Animations.init();
   STORE.applyLinks();
-
-  if (document.body.classList.contains('download-page')) {
-    initDownloadPage();
-  }
 
   Language.onLangChange((data) => {
     buildDynamicContent(data);
     if (document.body.classList.contains('download-page')) {
-      updateRedirectBanner(data);
+      initDownloadPage(data);
     }
   });
 
@@ -26,18 +20,26 @@ document.addEventListener('DOMContentLoaded', async () => {
       Language.setLang(btn.dataset.lang);
     });
   });
+
+  // Non-blocking: content builds when language JSON arrives
+  Language.init();
 });
 
 /* ── Download page auto-redirect ──────────────────── */
-function initDownloadPage() {
+let downloadRedirectStarted = false;
+
+function initDownloadPage(data) {
   const platform = STORE.detectPlatform();
   if (platform === 'other') return;
 
-  updateRedirectBanner(Language.getData());
+  updateRedirectBanner(data || Language.getData());
   const banner = document.getElementById('redirect-banner');
   if (banner) banner.hidden = false;
 
-  STORE.redirectIfMobile(1200);
+  if (!downloadRedirectStarted) {
+    downloadRedirectStarted = true;
+    STORE.redirectIfMobile(1200);
+  }
 }
 
 function updateRedirectBanner(data) {
@@ -61,19 +63,36 @@ function buildDynamicContent(data) {
   buildFAQ(data);
 }
 
-/* ── Hero screenshots ─────────────────────────────── */
+/* ── Hero screenshots (update alts only if imgs exist) ─ */
 function buildHeroPhones(data) {
   const left = document.getElementById('hero-phone-left');
   const right = document.getElementById('hero-phone-right');
   if (!left || !right || !data.hero) return;
 
   const { phone_left: phoneLeft, phone_right: phoneRight } = data.hero;
-  if (phoneLeft?.src) {
-    left.innerHTML = `<img src="${phoneLeft.src}" alt="${phoneLeft.alt}" width="1242" height="2688" loading="eager">`;
+
+  upsertHeroImage(left, phoneLeft, true);
+  upsertHeroImage(right, phoneRight, false);
+}
+
+function upsertHeroImage(container, phone, isPrimary) {
+  if (!phone?.src) return;
+
+  let img = container.querySelector('img');
+  if (img) {
+    if (phone.alt) img.alt = phone.alt;
+    return;
   }
-  if (phoneRight?.src) {
-    right.innerHTML = `<img src="${phoneRight.src}" alt="${phoneRight.alt}" width="1242" height="2688" loading="eager">`;
-  }
+
+  img = document.createElement('img');
+  img.src = phone.src;
+  img.alt = phone.alt || '';
+  img.width = 296;
+  img.height = 640;
+  img.loading = 'eager';
+  img.decoding = 'async';
+  if (isPrimary) img.fetchPriority = 'high';
+  container.appendChild(img);
 }
 
 /* ── Features ─────────────────────────────────────── */
@@ -117,14 +136,14 @@ function buildGallery(data) {
   const screenshots = data.gallery?.screenshots ?? [];
   if (screenshots.length === 0) return;
 
-  slider.innerHTML = screenshots.map((shot, index) => `
+  slider.innerHTML = screenshots.map((shot) => `
     <div class="gallery-item gallery-item--screenshot">
       <img
         src="${shot.src}"
         alt="${shot.alt}"
-        width="1242"
-        height="2688"
-        loading="${index < 2 ? 'eager' : 'lazy'}"
+        width="296"
+        height="640"
+        loading="lazy"
         decoding="async"
       >
     </div>
